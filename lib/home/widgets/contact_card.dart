@@ -14,46 +14,54 @@ class ContactCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.hardEdge,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
       child: !ResponsiveLayout.isMobileLayout(context)
-          ? Row(
+          ? Stack(
+              alignment: Alignment.bottomLeft,
               children: [
+                Card(
+                  margin: const EdgeInsets.all(0),
+                  child: Container(
+                    constraints: const BoxConstraints(minHeight: 150),
+                    padding: const EdgeInsets.only(
+                        left: 220, top: 20, bottom: 20, right: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(name,
+                            style: Theme.of(context).textTheme.titleLarge),
+                        const SizedBox(height: 10),
+                        Text(description,
+                            style: Theme.of(context).textTheme.titleMedium),
+                      ],
+                    ),
+                  ),
+                ),
                 Image.asset(
                   image,
                   width: 200,
-                  height: 200,
                   fit: BoxFit.cover,
                 ),
-                const SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(name, style: Theme.of(context).textTheme.titleLarge),
-                    const SizedBox(height: 10),
-                    Text(description,
-                        style: Theme.of(context).textTheme.titleMedium),
-                  ],
-                )
               ],
             )
           : Column(
               children: [
                 Image.asset(
                   image,
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.cover,
+                  width: 300,
                 ),
                 const SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(name, style: Theme.of(context).textTheme.titleLarge),
-                    const SizedBox(height: 10),
-                    Text(description,
-                        style: Theme.of(context).textTheme.titleMedium),
-                  ],
+                Card(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(name, style: Theme.of(context).textTheme.titleLarge),
+                      const SizedBox(height: 10),
+                      Text(description,
+                          style: Theme.of(context).textTheme.titleMedium),
+                    ],
+                  ),
                 )
               ],
             ),

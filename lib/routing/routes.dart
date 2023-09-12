@@ -1,3 +1,4 @@
+import 'package:alif/home/contact_page.dart';
 import 'package:flutter/material.dart';
 import 'package:routemaster/routemaster.dart';
 
@@ -35,7 +36,7 @@ class Routes {
       '/courses': (route) => const MaterialPage(child: CoursesPage()),
       '/testmonial': (route) => const MaterialPage(child: AboutPage()),
       '/about': (route) => const MaterialPage(child: AboutPage()),
-      '/contact': (route) => const MaterialPage(child: AboutPage()),
+      '/contact': (route) => MaterialPage(child: ContactPage()),
     },
   );
 

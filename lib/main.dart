@@ -1,15 +1,17 @@
-import 'package:alif/home/home_page.dart';
+//import 'package:alif/routing/go_routes.dart';
+import 'package:alif/routing/routes.dart';
 import 'package:flutter/material.dart';
 
-import 'routing/routes.dart';
+import 'theme/theming.dart';
 
-void main() {  
+void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final Routes routes = Routes();
-  
+  final routes = Routes();
+  final theming = Theming();
+
   MyApp({super.key});
 
   // This widget is the root of your application.
@@ -17,13 +19,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      routerDelegate: routes.routemasterDelegate,
-      routeInformationParser: routes.routemasterParser,
+      theme: theming.darkTheme,
+      // ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
+      //routerConfig: routes.router, // Go router
+      routerDelegate: routes.routemasterDelegate, // Routemaster
+      routeInformationParser: routes.routemasterParser, // Routemaster
     );
   }
 }
-

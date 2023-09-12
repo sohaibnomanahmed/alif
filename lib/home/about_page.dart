@@ -7,103 +7,23 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Container();
-    // ListView(
-    //   shrinkWrap: true,
-    //   children: [
-    //     const ContactCard(
-    //         image: 'assets/images/profile.jpg',
-    //         name: 'Musab Sufian',
-    //         description: '....'),
-    //     Card(
-    //       clipBehavior: Clip.hardEdge,
-    //       child: Row(
-    //         children: [
-    //           Image.asset(
-    //             'assets/images/profile.jpg',
-    //             width: 200,
-    //             height: 200,
-    //             fit: BoxFit.cover,
-    //           ),
-    //           const SizedBox(width: 10),
-    //           Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             children: [
-    //               Text("Name", style: Theme.of(context).textTheme.titleLarge),
-    //               Text("Education",
-    //                   style: Theme.of(context).textTheme.titleMedium),
-    //             ],
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //     Card(
-    //       clipBehavior: Clip.hardEdge,
-    //       child: Row(
-    //         children: [
-    //           Image.asset(
-    //             'assets/images/profile.jpg',
-    //             width: 200,
-    //             height: 200,
-    //             fit: BoxFit.cover,
-    //           ),
-    //           const SizedBox(width: 10),
-    //           Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             children: [
-    //               Text("Name", style: Theme.of(context).textTheme.titleLarge),
-    //               Text("Education",
-    //                   style: Theme.of(context).textTheme.titleMedium),
-    //             ],
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //     Card(
-    //       clipBehavior: Clip.hardEdge,
-    //       child: Row(
-    //         children: [
-    //           Image.asset(
-    //             'assets/images/profile.jpg',
-    //             width: 200,
-    //             height: 200,
-    //             fit: BoxFit.cover,
-    //           ),
-    //           const SizedBox(width: 10),
-    //           Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             children: [
-    //               Text("Name", style: Theme.of(context).textTheme.titleLarge),
-    //               Text("Education",
-    //                   style: Theme.of(context).textTheme.titleMedium),
-    //             ],
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //     Card(
-    //       clipBehavior: Clip.hardEdge,
-    //       child: Row(
-    //         children: [
-    //           Image.asset(
-    //             'assets/images/profile.jpg',
-    //             width: 200,
-    //             height: 200,
-    //             fit: BoxFit.cover,
-    //           ),
-    //           const SizedBox(width: 10),
-    //           Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             children: [
-    //               Text("Name", style: Theme.of(context).textTheme.titleLarge),
-    //               Text("Education",
-    //                   style: Theme.of(context).textTheme.titleMedium),
-    //             ],
-    //           )
-    //         ],
-    //       ),
-    //     )
-    //   ],
-    // );
+    return ListView(
+      padding:
+          EdgeInsets.symmetric(horizontal: screenWidth * 0.1, vertical: 20),
+      children: [
+        const ContactCard(
+            image: 'assets/images/profile.png',
+            name: 'Musab Sufian',
+            description: '....'),
+        const ContactCard(
+            image: 'assets/images/profile.png',
+            name: 'Musab Sufian',
+            description: '....'),
+        const ContactCard(
+            image: 'assets/images/profile.png',
+            name: 'Musab Sufian',
+            description: '....'),
+      ],
+    );
   }
 }

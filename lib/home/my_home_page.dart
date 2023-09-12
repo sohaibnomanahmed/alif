@@ -46,32 +46,28 @@ class MyHomePage extends StatelessWidget {
               ),
             )
           : null,
-      body: Column(children: [
-        const TopBar(),
-        Expanded(
-          child: ResponsiveLayout(
-            mobileLayout: MobileLayout(
-              child: TabBarView(
-                controller: tabPage.controller,
-                children: [
-                  for (final stack in tabPage.stacks)
-                    PageStackNavigator(stack: stack)
-                ],
-              ),
-            ),
-            desktopLayout: DesktopLayout(
-              child: TabBarView(
-                physics: const NeverScrollableScrollPhysics(),
-                controller: tabPage.controller,
-                children: [
-                  for (final stack in tabPage.stacks)
-                    PageStackNavigator(stack: stack)
-                ],
-              ),
-            ),
+      appBar: const TopBar(),
+      body: ResponsiveLayout(
+        mobileLayout: MobileLayout(
+          child: TabBarView(
+            controller: tabPage.controller,
+            children: [
+              for (final stack in tabPage.stacks)
+                PageStackNavigator(stack: stack)
+            ],
           ),
-        )
-      ]),
+        ),
+        desktopLayout: DesktopLayout(
+          child: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
+            controller: tabPage.controller,
+            children: [
+              for (final stack in tabPage.stacks)
+                PageStackNavigator(stack: stack)
+            ],
+          ),
+        ),
+      ),
 
       // This trailing comma makes auto-formatting nicer for build methods.
     );
