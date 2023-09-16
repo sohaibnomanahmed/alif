@@ -23,11 +23,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Alif Institutt',
       theme: theming.lightTheme,
-      // ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
-      //routerConfig: routes.router, // Go router
       routerDelegate: routes.routemasterDelegate, // Routemaster
       routeInformationParser: routes.routemasterParser, // Routemaster
     );
