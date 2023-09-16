@@ -30,7 +30,9 @@ class Routes {
     router = GoRouter(
       
       routes: [
-      ShellRoute(builder: (context, state, child) => MyHomePage(), routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => MyHomePage(), routes: [
         GoRoute(path: '/home', builder: (context, state) => const HomePage()),
         GoRoute(
             path: '/courses', builder: (context, state) => const CoursesPage()),

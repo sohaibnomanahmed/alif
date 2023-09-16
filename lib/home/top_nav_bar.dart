@@ -11,13 +11,12 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final tabPage = TabPage.of(context);
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Padding(
+    return AppBar(
+      title: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: ResponsiveLayout.isDesktopLayout(context)
                 ? screenWidth * 0.1
-                : 20),
+                : 0),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           //Image.asset('assets/images/logo.png', width: 56),
@@ -31,7 +30,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
           ResponsiveLayout.isMobileLayout(context)
               ? const SizedBox()
               : SizedBox(
-                  width: 600,
+                  width: 500,
                   child: TabBar(
                     dividerColor: Colors.transparent,
                     controller: tabPage.controller,
@@ -51,5 +50,5 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(65);
+  Size get preferredSize => const Size.fromHeight(55);
 }

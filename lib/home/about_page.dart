@@ -1,4 +1,5 @@
 import 'package:alif/home/widgets/contact_card.dart';
+import 'package:alif/home/widgets/footer.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
@@ -6,24 +7,57 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    return ListView(
-      padding:
-          EdgeInsets.symmetric(horizontal: screenWidth * 0.1, vertical: 20),
-      children: [
-        const ContactCard(
-            image: 'assets/images/profile.png',
-            name: 'Musab Sufian',
-            description: '....'),
-        const ContactCard(
-            image: 'assets/images/profile.png',
-            name: 'Musab Sufian',
-            description: '....'),
-        const ContactCard(
-            image: 'assets/images/profile.png',
-            name: 'Musab Sufian',
-            description: '....'),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                scale: 7,
+                image: AssetImage("assets/images/back.png"),
+                repeat: ImageRepeat.repeat,
+              ),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+            width: double.infinity,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: Column(
+                children: [
+                  Text("VISJON",
+                      style: Theme.of(context).textTheme.displayMedium),
+                  const SizedBox(height: 20),
+                  Text(
+                    "Kitaab Academy envisions a Muslim community which is deeply connected to their faith through the learning of Classical Arabic.",
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 30),
+          const ContactCard(
+              image: 'assets/images/profile.png',
+              name: 'Sufian Musab',
+              role: 'Grunnlegger og Arabisklærer',
+              description:
+                  'Ustadh Sufian er utdannet Sivilokonom fra Norges Handelshoyskole i Bergen. Det var under et internship i Cairo at Sufian fikk dyp interesse for Arabisk som forte han til Jordan. Han fullforte programmet i klassisk arabisk hos Oasid Institute i Amman, Jordan (5/5 nivaer). Under hans opphold studerte han også bøker i islamske vitenskap og fikk ljazah fra den ledende arabisk filologen Shaykh Ali Hani i grammatikk boken Al-Ajrumiyyah. Ustadh Sufian har siden utviklet et pensum for Norse studenter og undervist i to år i Norge.'),
+          const ContactCard(
+              image: 'assets/images/profile2.png',
+              name: 'Usman Andreas',
+              role: 'Arabisklærer',
+              description:
+                  'Ustadh Usman har studert arabisk fra ung alder, og har alltid hatt en sterk forkjærlighet og fascinasjon for spräk generelt, og i sarlig grad det arabiske språket. Han har lingvistisk bakgrunn med utdanning fra UiO i Nordiske språk, i tillegg til à ha studert en rekke andre klassiske sävel som moderne språk, slik som latin, gresk, hebraisk, arameisk, persisk, fransk og italiensk m.fl. Han ble selv eksponert for den sakalte "naturmetoden" i Roma, da han studerte latin og gresk der ett år, og har siden vert en proponent for en mer levende tilnærming til språklaring.'),
+          const ContactCard(
+              image: 'assets/images/profile3.png',
+              name: 'Sohaib Ahmed',
+              role: 'Utviker',
+              description:
+                  'Sohaib jobber som utvikler for både app og nettsider. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon sende hendvendelser og registrere seg på kurs. Sohaib jobber som utvikler for både app og nettsider. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon sende hendvendelser og registrere seg på kurs.'),
+          const SizedBox(height: 30),
+          const Footer()
+        ],
+      ),
     );
   }
 }

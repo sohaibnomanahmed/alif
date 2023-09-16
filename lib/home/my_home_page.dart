@@ -1,3 +1,4 @@
+import 'package:alif/home/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:routemaster/routemaster.dart';
 
@@ -17,6 +18,8 @@ class MyHomePage extends StatelessWidget {
       //key: scaffoldKey,
       endDrawer: ResponsiveLayout.isMobileLayout(context)
           ? Drawer(
+              shape:
+                  const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
               child: Column(
                 children: [
                   const SizedBox(height: 20),
@@ -30,11 +33,13 @@ class MyHomePage extends StatelessWidget {
                         labelColor: Theme.of(context).primaryColor,
                         controller: tabPage.controller,
                         tabs: [
-                          ...navMenu.map((e) => Tab(
-                                height: double.infinity,
-                                child: RotatedBox(
-                                  quarterTurns: -1,
-                                  child: Text(e),
+                          ...navMenu.map((e) => GestureDetector(
+                                child: Tab(
+                                  height: double.infinity,
+                                  child: RotatedBox(
+                                    quarterTurns: -1,
+                                    child: Text(e),
+                                  ),
                                 ),
                               ))
                         ],
@@ -47,29 +52,37 @@ class MyHomePage extends StatelessWidget {
             )
           : null,
       appBar: const TopBar(),
-      body: ResponsiveLayout(
-        mobileLayout: MobileLayout(
-          child: TabBarView(
-            controller: tabPage.controller,
-            children: [
-              for (final stack in tabPage.stacks)
-                PageStackNavigator(stack: stack)
-            ],
+      body: Container(
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //     scale: 7,
+        //     fit: BoxFit.none,
+        //     image: AssetImage("assets/images/back.png"),
+        //     repeat: ImageRepeat.repeat,
+        //   ),
+        // ),
+        child: ResponsiveLayout(
+          mobileLayout: MobileLayout(
+            child: TabBarView(
+              controller: tabPage.controller,
+              children: [
+                for (final stack in tabPage.stacks)
+                  PageStackNavigator(stack: stack)
+              ],
+            ),
           ),
-        ),
-        desktopLayout: DesktopLayout(
-          child: TabBarView(
-            physics: const NeverScrollableScrollPhysics(),
-            controller: tabPage.controller,
-            children: [
-              for (final stack in tabPage.stacks)
-                PageStackNavigator(stack: stack)
-            ],
+          desktopLayout: DesktopLayout(
+            child: TabBarView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: tabPage.controller,
+              children: [
+                for (final stack in tabPage.stacks)
+                  PageStackNavigator(stack: stack)
+              ],
+            ),
           ),
         ),
       ),
-
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

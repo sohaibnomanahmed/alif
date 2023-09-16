@@ -9,14 +9,14 @@ import '../home/my_home_page.dart';
 
 const homePage = "Home";
 const coursesPage = "Courses";
-const testmonialPage = "Testmonial";
+//const testmonialPage = "Testmonial";
 const aboutPage = "About";
 const contactPage = "Contact";
 
 List<String> navMenu = [
   homePage,
   coursesPage,
-  testmonialPage,
+  //testmonialPage,
   aboutPage,
   contactPage
 ];
@@ -28,13 +28,13 @@ class Routes {
       '/': (route) => TabPage(child: MyHomePage(), paths: const [
             '/home',
             '/courses',
-            '/testmonial',
+            //'/testmonial',
             '/about',
             '/contact'
           ]),
       '/home': (route) => const MaterialPage(child: HomePage()),
       '/courses': (route) => const MaterialPage(child: CoursesPage()),
-      '/testmonial': (route) => const MaterialPage(child: AboutPage()),
+      //'/testmonial': (route) => const MaterialPage(child: AboutPage()),
       '/about': (route) => const MaterialPage(child: AboutPage()),
       '/contact': (route) => MaterialPage(child: ContactPage()),
     },
