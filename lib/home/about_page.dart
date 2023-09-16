@@ -23,12 +23,13 @@ class AboutPage extends StatelessWidget {
             child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 600),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text("VISJON",
                       style: Theme.of(context).textTheme.displayMedium),
                   const SizedBox(height: 20),
                   Text(
-                    "Kitaab Academy envisions a Muslim community which is deeply connected to their faith through the learning of Classical Arabic.",
+                    "Alif Institutts visjon er at muslimer skal forstå sine religiøse tekster",
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ],
@@ -53,7 +54,7 @@ class AboutPage extends StatelessWidget {
               name: 'Sohaib Ahmed',
               role: 'Utviker',
               description:
-                  'Sohaib jobber som utvikler for både app og nettsider. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon sende hendvendelser og registrere seg på kurs. Sohaib jobber som utvikler for både app og nettsider. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon sende hendvendelser og registrere seg på kurs.'),
+                  'Sohaib jobber som utvikler for både apper og nettsider. Vi lever i en digital verden, derfor er det også viktig at Alif også har en digital platfrom. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon og sende hendvendelser samtidig også kunne registrere seg på kurs.'),
           const SizedBox(height: 30),
           const Footer()
         ],

@@ -151,7 +151,7 @@ class _ContactPageState extends State<RegPage> {
                       ),
                       const SizedBox(height: 10),
                       TextField(
-                        decoration: const InputDecoration(hintText: 'Alder'),
+                        decoration: const InputDecoration(hintText: 'Alder*'),
                         onChanged: (value) => setState(() => _age = value),
                         keyboardType: TextInputType.number,
                       ),

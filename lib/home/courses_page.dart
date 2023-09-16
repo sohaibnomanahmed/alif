@@ -8,11 +8,24 @@ class CoursesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 30),
-          CourseCard(
+          Container(
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  scale: 7,
+                  image: AssetImage("assets/images/back.png"),
+                  repeat: ImageRepeat.repeat,
+                ),
+              ),
+              padding: const EdgeInsets.all(30),
+              width: double.infinity,
+              child: Text("KURS",
+                  style: Theme.of(context).textTheme.displayMedium)),
+          const SizedBox(height: 30),
+          const CourseCard(
             image: 'assets/images/course.jpeg',
             name: 'Introduction to Arabic Grammar',
             description:
@@ -21,7 +34,7 @@ class CoursesPage extends StatelessWidget {
             time: "Torsdag kl 13:00-15:00 og Fredag kl 12:00-13:00",
             level: "1",
           ),
-          CourseCard(
+          const CourseCard(
             image: 'assets/images/course.jpeg',
             name: 'Intermediate Arabic Grammar',
             description:
@@ -30,7 +43,7 @@ class CoursesPage extends StatelessWidget {
             time: "Mandag kl 13:00-15:00",
             level: "2",
           ),
-          CourseCard(
+          const CourseCard(
             image: 'assets/images/course.jpeg',
             name: 'Advanced Arabic Grammar I',
             description:
@@ -39,8 +52,8 @@ class CoursesPage extends StatelessWidget {
             time: "Torsdag kl 13:00-15:00 og Fredag kl 12:00-13:00",
             level: "3",
           ),
-          SizedBox(height: 30),
-          Footer()
+          const SizedBox(height: 30),
+          const Footer()
         ],
       ),
     );

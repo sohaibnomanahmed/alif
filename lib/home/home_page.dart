@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
             mainImage: 'assets/images/main.png',
             title: "Innhold",
             text:
-                "Start å lær arabisk med Alif Institutt, vi holder kurs både for nybegynnere og for de som har litt bakgrunn med å studere arabisk fra før. Vi lærer bort klassisk arabisk som er hovedsaklig brukt i Quranen, slik at vi sammen kan forstå den hellige boken bedre",
+                "Start å lære arabisk med Alif Institutt. Med spesialdesignet pensum for norske studenter tar vi deg fra å lese Koranen til å forstå det arabiske nivået. Vi har 4 nivåer, nivå 1 er designet fra å ta deg fra å lese koranen til å forstå grunnleggende arabisk. Etter å ha vært gjennom høyeste nivå (nivå 4) har du lært 90% av arabisk grammatikk og kan lese en god del klassiske og religiøse tekster på egenhånd",
           ),
           const SizedBox(height: 50),
           FrontpageInfoTile(
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
             mainImage: 'assets/images/main3.png',
             title: "Finansiell hjelp",
             text:
-                "Vi tilbyr finansiell hjelp til de som trenger dette, målet er at alle skal kunne lære og økonomien burde ikke bli en hinder. Vi tilbyr også student tilbud til fulltidstudenter som studere ved siden av kurset.",
+                "Alif Institutts visjon er at muslimer skal forstå sine religiøse tekster. Dette skal skape individer med integritet og stolthet i sin religion gjennom kunnskap. Vi tar betalt slik at selskapet vokser og vi kan gjøre dette på heltid og skreddersy profesjonelle kurs. Gitt vår visjon vil vi ikke nekte en student å studere basert på økonomiske begrensninger, derfor kan det søkes om økonomisk støtte fra oss. Send oss en epost med din motivasjon og beskriv din situasjon til oss for økonomisk støtte",
           ),
           const SizedBox(height: 50),
           const Footer()
