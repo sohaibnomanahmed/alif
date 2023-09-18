@@ -10,6 +10,7 @@ class CourseCard extends StatefulWidget {
   final String level;
   final String time;
   final String price;
+  final bool isAvaiable;
 
   const CourseCard({
     super.key,
@@ -19,6 +20,7 @@ class CourseCard extends StatefulWidget {
     required this.level,
     required this.time,
     required this.price,
+    required this.isAvaiable,
   });
 
   @override
@@ -69,15 +71,17 @@ class _CourseCardState extends State<CourseCard> {
               style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 10),
           ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: ((context) => RegPage(
-                        courseImage: widget.image,
-                        courseName: widget.name,
-                        description: widget.description,
-                        price: widget.price,
-                        level: widget.level))));
-              },
+              onPressed: widget.isAvaiable
+                  ? () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: ((context) => RegPage(
+                              courseImage: widget.image,
+                              courseName: widget.name,
+                              description: widget.description,
+                              price: widget.price,
+                              level: widget.level))));
+                    }
+                  : null,
               child: const Text("Registrer deg"))
         ],
       ),
