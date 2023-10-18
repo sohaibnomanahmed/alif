@@ -96,7 +96,7 @@ class _ContactPageState extends State<RegPage> {
                       const SizedBox(height: 10),
                       TextField(
                         controller: nameController,
-                        decoration: const InputDecoration(hintText: 'Navn*'),
+                        decoration: const InputDecoration(hintText: 'Navn:*'),
                         keyboardType: TextInputType.name,
                         autofocus: true,
                         onChanged: (value) => setState(() => _name = value),
@@ -104,7 +104,7 @@ class _ContactPageState extends State<RegPage> {
                       const SizedBox(height: 10),
                       TextField(
                         controller: emailController,
-                        decoration: const InputDecoration(hintText: 'Epost*'),
+                        decoration: const InputDecoration(hintText: 'Epost:*'),
                         keyboardType: TextInputType.emailAddress,
                         autofocus: true,
                         onChanged: (value) => setState(() => _email = value),
@@ -113,13 +113,13 @@ class _ContactPageState extends State<RegPage> {
                       TextField(
                         controller: messageController,
                         decoration:
-                            const InputDecoration(hintText: 'Mobilnummer*'),
+                            const InputDecoration(hintText: 'Mobilnummer:*'),
                         autofocus: true,
                         onChanged: (value) => setState(() => _phone = value),
                         keyboardType: TextInputType.number,
                       ),
                       const SizedBox(height: 10),
-                      Text("Kjønn*"),
+                      Text("Kjønn:*"),
                       RadioListTile(
                         title: Text("Mann"),
                         value: "mann",
@@ -144,21 +144,21 @@ class _ContactPageState extends State<RegPage> {
                       TextField(
                         decoration: const InputDecoration(
                             hintText:
-                                'Har du erfaring med arabisk fra før? hvis Ja, gjerne legg til hvor mye*'),
+                                'Ditt nivå på arabisk (hva du har studert før og hvor):*'),
                         onChanged: (value) =>
                             setState(() => _arabicLevel = value),
                         keyboardType: TextInputType.text,
                       ),
                       const SizedBox(height: 10),
                       TextField(
-                        decoration: const InputDecoration(hintText: 'Alder*'),
+                        decoration: const InputDecoration(hintText: 'Alder:*'),
                         onChanged: (value) => setState(() => _age = value),
                         keyboardType: TextInputType.number,
                       ),
                       const SizedBox(height: 10),
                       TextField(
                         decoration: const InputDecoration(
-                            hintText: 'Nåværende studie/jobb*'),
+                            hintText: 'Yrke/Studie:*'),
                         onChanged: (value) => setState(() => _studies = value),
                         keyboardType: TextInputType.text,
                       ),

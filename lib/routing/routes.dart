@@ -7,11 +7,11 @@ import '../home/courses_page.dart';
 import '../home/home_page.dart';
 import '../home/my_home_page.dart';
 
-const homePage = "Home";
-const coursesPage = "Courses";
+const homePage = "Hjem";
+const coursesPage = "Kurs";
 //const testmonialPage = "Testmonial";
-const aboutPage = "About";
-const contactPage = "Contact";
+const aboutPage = "Om oss";
+const contactPage = "Kontakt";
 
 List<String> navMenu = [
   homePage,

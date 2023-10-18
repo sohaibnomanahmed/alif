@@ -20,12 +20,15 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           //Image.asset('assets/images/logo.png', width: 56),
-          Text(
-            "ALIF INSTITUTT",
-            style: Theme.of(context)
-                .textTheme
-                .titleMedium
-                ?.copyWith(fontWeight: FontWeight.bold),
+          GestureDetector(
+            onTap: () => tabPage.index = 0,
+            child: Text(
+              "ALIF INSTITUTT",
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           ResponsiveLayout.isMobileLayout(context)
               ? const SizedBox()

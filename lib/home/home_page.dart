@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    "Start din reise gjennom det arabiske språket sammen med Alif",
+                    "Lær Arabisk med Alif Institutt",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.displayMedium?.copyWith(
                           fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
             mainImage: 'assets/images/main.png',
             title: "Innhold",
             text:
-                "Start å lære arabisk med Alif Institutt. Med spesialdesignet pensum for norske studenter tar vi deg fra å lese Koranen til å forstå det arabiske nivået. Vi har 4 nivåer, nivå 1 er designet fra å ta deg fra å lese koranen til å forstå grunnleggende arabisk. Etter å ha vært gjennom høyeste nivå (nivå 4) har du lært 90% av arabisk grammatikk og kan lese en god del klassiske og religiøse tekster på egenhånd",
+                "Start å lære arabisk med Alif Institutt. Med spesialdesignet pensum for norske studenter tar vi deg fra å lese Koranen til å forstå det arabiske språket. Vi har 4 nivåer, nivå 1 er designet fra å ta deg fra å lese koranen til å forstå grunnleggende arabisk. Etter å ha vært gjennom høyeste nivå (nivå 4) har du lært 90% av arabisk grammatikk og kan lese en god del klassiske og religiøse tekster på egenhånd",
           ),
           const SizedBox(height: 50),
           FrontpageInfoTile(
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
             mainImage: 'assets/images/main2.jpg',
             title: "Lokasjon",
             text:
-                "Vi underviser på lokalene til moskeen Islamic Culture Center som er gangsavstand fra Grønland T-bane Stasjon. Vi akn også ka noen klasser via Zoom når det trengs.",
+                "Vi underviser på lokalene til Islamic Cultural Centre (ICC) som er gangavstand fra Grønland T-bane stasjon. Vi har også online klasser. Våre klasser er en gang i uken på kveldstid og designet for de som vil studere arabisk deltid i Norge",
           ),
           const SizedBox(height: 50),
           FrontpageInfoTile(

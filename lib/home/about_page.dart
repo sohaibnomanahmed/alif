@@ -52,7 +52,7 @@ class AboutPage extends StatelessWidget {
           const ContactCard(
               image: 'assets/images/profile3.png',
               name: 'Sohaib Ahmed',
-              role: 'Utviker',
+              role: 'Utvikler',
               description:
                   'Sohaib jobber som utvikler for både apper og nettsider. Vi lever i en digital verden, derfor er det også viktig at Alif også har en digital platfrom. Han og har hatt ansvaret til å bygge Alif sin nettside, slik at brukerne kan se informasjon og sende hendvendelser samtidig også kunne registrere seg på kurs.'),
           const SizedBox(height: 30),
