@@ -13,6 +13,7 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final routes = Routes();
+
   final theming = Theming();
 
   MyApp({super.key});
